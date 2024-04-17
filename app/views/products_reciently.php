@@ -1,12 +1,12 @@
 <?php
-$currentPage = 'register.php';
+$currentPage = 'products_reciently.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
+    <title>Products recently Page</title>
     <link rel="stylesheet" href="../../public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -27,7 +27,7 @@ $currentPage = 'register.php';
         <nav class="main-menu">
             <ul>
             <li><a href="home.php" class="<?php echo ($currentPage === 'home.php') ? 'active' : ''; ?>">Estadísticas</a></li>
-            <li><a href="register.php" class="<?php echo ($currentPage === 'register.php') ? 'active' : ''; ?>">Registro</a></li>
+            <li><a href="products_reciently.php" class="<?php echo ($currentPage === 'products_reciently.php') ? 'active' : ''; ?>">Productos añadidos recientemente</a></li>
             </ul>
         </nav>
         <div class="user-menu">
@@ -42,37 +42,53 @@ $currentPage = 'register.php';
         </div>
     </header>
 
-    <div class="grid-container-three">
-        <a href="">
-            <div class="grid-item-three">
-                <p>Productos</p>
-            </div>
-        </a>
-        
-        <a href="">
-            <div class="grid-item-three">
-                <p>Categorias</p>
-            </div>
-        </a>
-
-        <a href="">
-            <div class="grid-item-three">
-                <p>Ventas</p>
-            </div>
-        </a>
-
-        <a href="">
-            <div class="grid-item-three">
-                <p>reporte ventas</p>
-            </div>
-        </a>
-
-        <a href="">
-            <div class="grid-item-three">
-                <p>Inventario</p>
-            </div>
-        </a>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>PRODUCTOS</th>
+                    <th>CANTIDAD</th>
+                    <th>FECHA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="mt-3">
+                    <td>Producto 1</td>
+                    <td>10</td>
+                    <td>12/04/24</td>
+                </tr>
+                <tr class="mt-3">
+                    <td>Producto 2</td>
+                    <td>1</td>
+                    <td>22/04/24</td>
+                </tr>
+                <tr class="mt-3">
+                    <td>Producto 3</td>
+                    <td>4</td>
+                    <td>10/03/24</td>
+                </tr>
+                <tr class="mt-3">
+                    <td>Producto 4</td>
+                    <td>7</td>
+                    <td>10/01/24</td>
+                </tr>
+                <tr class="mt-3">
+                    <td>Producto 5</td>
+                    <td>9</td>
+                    <td>01/03/24</td>
+                </tr>
+                <tr class="mt-3">
+                    <td>Producto 6</td>
+                    <td>8</td>
+                    <td>19/02/24</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <script src="../../public/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../public/js/popper.min.js"></script>
+    <script src="../../public/bootstrap.min.js"></script>
 
 <script>
       function updateLocalTime() {
@@ -104,6 +120,5 @@ menuLinks.forEach(link => {
     });
 });
 </script>
-
 </body>
 </html>
